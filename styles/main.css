@@ -1,0 +1,322 @@
+body {
+  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  background-color: #f4f4f4;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: #333; /* old IE */
+  background-color: #333; /* Modern Browsers */
+}
+
+.hero-spacer {
+  margin-top: 50px;
+}
+
+.hero-feature {
+  margin-bottom: 30px;
+}
+
+footer {
+  margin: 50px 0;
+}
+
+.form-padding {
+  padding: 35px;
+}
+
+.sub-header-style {
+  background-color: pink;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+
+/*---------------- CSS For products in Home page ---------------*/
+
+.product-box {
+  background-color: mintcream;
+  border: 1px solid black;
+  border-radius: 26px;
+  box-shadow: 4px 4px;
+  height: 500px;
+}
+
+.product-box .product-thum-image-url {
+  height: 285px !important;
+  margin-top: 28px;
+  width: 166px;
+}
+
+.product-box .product-name {
+  color: indigo;
+  font-size: 15px;
+  font-style: oblique;
+}
+
+.product-box .product-price {
+  color: indigo;
+  font-size: 19px;
+  font-style: oblique;
+}
+
+.heart-style {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+/*---------------- CSS For specific product in product page ---------------*/
+
+.specific-product-image-url {
+  width: 90%;
+  padding : 14px;
+}
+
+.specific-product-name {
+  color: saddlebrown;
+  font-size: 27px;bl
+  font-style: oblique;
+  font-weight: bold;
+  padding: 18px;
+}
+
+.specific-product-desc {
+  color: saddlebrown;
+  font-size: 20px;
+  padding: 47px;
+}
+
+.specific-product-price {
+  color: black;
+  font-size: 27px;
+  font-weight: bold;
+  padding: 18px;
+}
+
+.specific-product-buy {
+  font-size: 10%;
+  padding: 18px;
+}
+
+/* CSS for Cart Product Details */
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+  vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+  table#cart tbody td .form-control{
+    width:20%;
+    display: inline !important;
+  }
+  .actions .btn{
+    width:36%;
+    margin:1.5em 0;
+  }
+
+  .actions .btn-info{
+    float:left;
+  }
+  .actions .btn-danger{
+    float:right;
+  }
+
+  table#cart thead { display: none; }
+  table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+  table#cart tbody tr td:first-child { background: #333; color: #fff; }
+  table#cart tbody td:before {
+    content: attr(data-th); font-weight: bold;
+    display: inline-block; width: 8rem;
+  }
+  table#cart tfoot td{display:block; }
+  table#cart tfoot td .btn{display:block;}
+}
+
+.display-inline {
+  display: inline;
+}
+
+.empty-cart-header {
+  color: salmon;
+  font-size: 26px;
+  font-style: oblique;
+  padding: 50px;
+}
+
+.start-shopping-now-button {
+  color: salmon;
+  font-size: 26px;
+  font-style: oblique;
+  padding: 50px;
+}
+
+/* For payment CSS */
+
+.number{
+  width:50px;
+  height:50px;
+  background:#80c0ff;
+  color:#FFF;
+  font-size:36px;
+  text-align: center;
+  border-radius:50%;
+  float:left;
+  padding-top:5px;
+  margin-left:10px;
+  margin-top: 1px;
+}
+
+.payment-form-padding {
+  padding: 10px;
+}
+
+.payment-heading {
+  color: saddlebrown;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 57px;
+  margin-top: 3px;
+  padding: 10px;
+}
+
+.payment-time-img-box {
+  width: 20%;
+  background-color: red;
+}
+
+.payment-row-padding {
+  padding: 12px;
+}
+
+.sub {
+  color: #aaa;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  width: 80%;
+  padding: 10px;
+}
+
+/* CSS for Contact Page */
+
+.bigicon {
+  font-size: 35px;
+  color: #36A0FF;
+} 
+
+/* CSS for About Page */
+
+.contact-template {
+  padding: 53px;
+  background-color: white;
+}
+
+.img-center {
+  margin: 0 auto;
+}
+
+.join-me-on {
+  padding: 23px;
+}
+
+.fb {
+  background: url("../images/fb_b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 14px;
+}
+.fb:hover {
+  background: url("../images/fb_o.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 14px;
+}
+.tweet {
+  background: url("../images/twitter_b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 14px;
+}
+.tweet:hover {
+  background: url("../images/twitter_o.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 14px;
+}
+.google {
+  background: url("../images/gplus_b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 14px;
+}
+.google:hover {
+  background: url("../images/gplus_o.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 14px;
+}
+
+/* For Orders page */
+
+.order-id-heading {
+   font-style: oblique;
+   padding: 16px;
+}
+
+.order-date-heading {
+   font-style: oblique;
+   padding: 16px;
+   margin-left: 10%;
+}
+
+.cursor-for-product-details {
+  cursor: default;
+}
+
+.height {
+  min-height: 200px;
+}
+
+.icon {
+  font-size: 47px;
+  color: #5CB85C;
+}
+
+.iconbig {
+  font-size: 77px;
+  color: #5CB85C;
+}
+
+.table > tbody > tr > .emptyrow {
+  border-top: none;
+}
+
+.table > thead > tr > .emptyrow {
+  border-bottom: none;
+}
+
+.table > tbody > tr > .highrow {
+  border-top: 3px solid;
+}
+
+.my-orders-heading {
+  padding: 20px;
+}
+
+.not-ordered-padding {
+  padding: 30px;
+}
+
+/* CSS For Collapse */
+
+.panel-title a {
+  display: block;
+  padding: 10px 15px;
+  margin: -10px -15px;
+}
+
+.panel-heading .panel-color {
+  background-color: white;
+} 
+
+/* CSS For Wishlist */
+
+.wishlist-heading {
+  font-style: oblique;
+  padding: 16px;
+}

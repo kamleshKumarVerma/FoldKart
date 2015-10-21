@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="eShopper">
+
+<head>
+  <title>E-Shopper</title>
+
+  <!-- AngularJS RESOURCES -->
+  <script src="resources/js/angular.min.js"></script>
+  <script src="resources/js/angular-route.min.js"></script>
+  <script src="resources/js/angular-sanitize.js"></script>
+  <script src="resources/js/ng-storage.js"></script>
+
+  <!-- jQuery RESOURCES -->
+  <script src="resources/js/jquery.js"></script> 
+
+  <!-- BOOTSTRAP RESOURCES  -->
+  <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+  <script src="resources/js/bootstrap.min.js"></script>
+
+  <!-- underscore.js RESOURCES (For Object implementation)-->
+  <script src="resources/js/underscore.js"></script>
+  
+  <!-- font-awesome CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Custom AngularJS Routing -->
+  <script src="routing.js"></script>
+
+  <!-- All components -->
+    <!-- Home components -->
+  <script src="components/home/homeCtrl.js"></script>
+  <script src="components/home/homeService.js"></script>
+
+    <!-- Header components -->
+  <script src="components/header/headerDir.js"></script>
+  <script src="components/header/headerService.js"></script>
+
+    <!-- Login components -->
+  <script src="components/login/loginDir.js"></script>
+  <script src="components/login/loginService.js"></script>
+
+    <!-- Signup components -->
+  <script src="components/signup/signupDir.js"></script>
+  <script src="components/signup/signupService.js"></script>
+
+  <!-- Contact components -->
+  <script src="components/contact/contactCtrl.js"></script>
+  <script src="components/contact/contactService.js"></script>
+
+  <!-- About components -->
+  <script src="components/about/aboutCtrl.js"></script>
+  <script src="components/about/aboutService.js"></script>
+
+  <!-- Product components -->
+  <script src="components/product/productCtrl.js"></script>
+  <script src="components/product/productService.js"></script>
+
+  <!-- Cart components -->
+  <script src="components/cart/cartDir.js"></script>
+  <script src="components/cart/cartService.js"></script>
+
+  <!-- Payment components -->
+  <script src="components/payment/paymentCtrl.js"></script>
+  <script src="components/payment/paymentService.js"></script>
+
+   <!-- Orders components -->
+  <script src="components/orders/ordersCtrl.js"></script>
+  <script src="components/orders/ordersService.js"></script>
+
+  <!-- Wishlist components -->
+  <script src="components/wishlist/wishlistDir.js"></script>
+  <script src="components/wishlist/wishlistService.js"></script>
+
+   <!-- Profile components -->
+  <script src="components/profile/profileCtrl.js"></script>
+  <script src="components/profile/profileService.js"></script>
+
+  <!-- UTILITY components -->
+  <script src="utility/constant.js"></script>
+
+</head>
+
+<!-- define angular controller -->
+<body>
+
+   <!-- header directive -->
+   <header></header>
+
+   <!-- inject template -->
+   <div ng-view></div>
+
+  
+</body>
+
+</html>

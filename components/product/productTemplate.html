@@ -1,0 +1,31 @@
+<div class="container">  
+    <div class="row">
+    	<div class="col-md-4">
+    		<div class="thumbnail">
+    			<img src="{{product.img_url}}" class="img-responsive specific-product-image-url">
+    		</div>
+    	</div>
+        <div class="col-md-8">
+        	<div class="thumbnail">
+                <div class="specific-product-name">
+                    {{product.name}}
+                </div>
+                <div class="specific-product-desc" ng-bind-html="product.desc">
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="specific-product-price pull-left">
+                            Pay   {{product.price | currency : "Rs. " : "0"}}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="specific-product-buy pull-right">
+                            <button class="btn btn-lg btn-success" ng-click="addInCart(product.id)">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>  
+</div>

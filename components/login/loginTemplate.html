@@ -1,0 +1,33 @@
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><img width="307px" height="94px" src="images/brand-logo.png" class="img-responsive"></center>
+        </div>
+        <div class="modal-body">
+            <div class="form-padding">
+              <h3><center>Login</center></h3>
+              <form ng-submit="login()" class="form center-block">
+                  <div class="form-group">
+                    <input type="email" autofocus="" required="" ng-model="loginData.email" placeholder="Email" class="form-control input-lg">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" required="" ng-model="loginData.password" placeholder="Password" class="form-control input-lg">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <a href="" ng-click="openSignupModal()">New User ?</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>

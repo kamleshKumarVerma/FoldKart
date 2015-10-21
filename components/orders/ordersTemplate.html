@@ -1,0 +1,91 @@
+<div class="container">
+	<div class="panel-group" id="accordion">
+		<div class="my-orders-heading">
+			<h3><center>My Orders</center></h3>
+		</div>
+		<div class="thumbnail" ng-if="myOrders.length === 0">
+			<div class="not-ordered-padding">
+				<center><h3>You didn't order anything</h3></center>
+				<div class="row">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<div class="start-shopping-now-button">
+							<button class="btn btn-success btn-block" ng-click="goToHomePage()">START SHOPPING NOW</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default" ng-repeat="data in myOrders">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="panel-color" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" ng-click="getOrderDetails(data.product_list)">
+						<span>
+							<label class="order-id-heading"><h3>Order ID :  <small>{{data.id}}</small> </h3></label>
+							<label class="order-date-heading"><h3>Purchased Date : <small>{{data.date}}</small></h3></label>
+						</span>
+					</a>
+				</h4>
+			</div>
+			<div id="collapse{{$index}}" class="panel-collapse collapse">
+				<!-- Start details  -->
+				<div ng-if="isLoading">
+					<center><img src="images/loading.gif" class="img-responsive"></center>
+				</div>
+				<div class="panel-body" ng-if="!isLoading">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="text-center"><strong>Order summary</strong></h3>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<td><strong>Item Name</strong></td>
+													<td class="text-center"><strong>Item Price</strong></td>
+													<td class="text-center"><strong>Item Quantity</strong></td>
+													<td class="text-right"><strong>Total</strong></td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr ng-repeat="product in userOrderedProducts">
+													<td>{{product.name}}</td>
+													<td class="text-center">{{product.price|currency:"Rs.":"0"}}</td>
+													<td class="text-center">{{product.quantity}}</td>
+													<td class="text-right">{{product.quantity*product.price|currency:"Rs.":"0"}}</td>
+												</tr>
+												<tr>
+													<td class="highrow"></td>
+													<td class="highrow"></td>
+													<td class="highrow text-center"><strong>Subtotal</strong></td>
+													<td class="highrow text-right">{{totalPrice|currency:"Rs.":"0"}}</td>
+												</tr>
+												<tr>
+													<td class="emptyrow"></td>
+													<td class="emptyrow"></td>
+													<td class="emptyrow text-center"><strong>Shipping</strong></td>
+													<td class="emptyrow text-right">Rs. 0</td>
+												</tr>
+												<tr>
+													<td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+													<td class="emptyrow"></td>
+													<td class="emptyrow text-center"><strong>Total</strong></td>
+													<td class="emptyrow text-right">{{totalPrice|currency:"Rs.":"0"}}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End details -->
+			</div>
+		</div>
+	</div>
+</div>

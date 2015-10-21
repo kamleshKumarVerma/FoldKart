@@ -1,0 +1,81 @@
+<hr class="">
+<div class="container target">
+    <div class="row">
+        <div class="col-sm-10">
+            <h1 class="">{{userObject.name}}</h1>
+            <br>
+        </div>
+        <div class="col-sm-2">
+            <a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="images/default-avatar.png" width="123px">
+            </a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <!--left col-->
+            <ul class="list-group">
+                <li class="list-group-item text-muted" contenteditable="false">Profile</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> {{userObject.date}}</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> Today</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Real name</strong></span> {{userObject.name}}</li>
+            </ul>
+            <div class="panel panel-default">
+                <div class="panel-heading">Liked ?
+
+                </div>
+                <div class="panel-body"><i style="color:green" class="fa fa-check-square"></i> Yes, I liked shopping on E-Shopper
+
+                </div>
+            </div>
+        </div>
+        <!--/col-3-->
+        <div class="col-sm-9" style="" contenteditable="false">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{userObject.name}} Bio</div>
+                <div class="panel-body"> A long description about me.
+
+                </div>
+            </div>
+            <div class="panel panel-default target">
+                <div class="panel-heading" contenteditable="false">Description about me</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <h3>
+                                        <caption>Name : </caption>{{userObject.name}}
+                                    </h3>
+                                    <h3>
+                                        <caption>Email : </caption>{{userObject.email}}
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <small ng-if="!isUpdate" ng-click="showUpdateTemplate()">Want to update your profile</small>
+                                    <form ng-if="isUpdate" ng-submit="updateMyProfile()" class="form center-block">
+                                      <div class="form-group">
+                                        <label>Name : </label>
+                                        <input type="text" required="" ng-model="userObject.name" placeholder="Password" class="form-control input-lg">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Password : </label>
+                                        <input type="password" required="" ng-model="userObject.password" placeholder="Password" class="form-control input-lg">
+                                      </div>
+                                      <div class="form-group">
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
+                                      </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

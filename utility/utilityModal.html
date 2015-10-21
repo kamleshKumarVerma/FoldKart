@@ -1,0 +1,41 @@
+<!-- Order Completed Modal -->
+<!-- Modal -->
+<div class="modal fade" id="orderCompleted" ng-controller="paymentController" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <center><img width="307px" height="94px" src="images/brand-logo.png" class="img-responsive"></center>
+            </div>
+            <div class="modal-body">
+                <div class="form-padding">
+                    <h3><center>Thanks for your Shopping .</center></h3>
+                    <h3>
+                        <center>
+                           <button class="btn btn-primary" ng-click="redirectToLandingPage()">Shop again</button>
+                        </center>
+                   </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error message Modal -->
+<!-- Modal -->
+<div class="modal fade" id="errorMsgModal" ng-controller="paymentController" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <center><img width="307px" height="94px" src="images/brand-logo.png" class="img-responsive"></center>
+            </div>
+            <div class="modal-body">
+                <div class="form-padding">
+                    <h3><center>Please fill all required fields .</center></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
