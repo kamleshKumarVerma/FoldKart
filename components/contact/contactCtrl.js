@@ -1,4 +1,4 @@
-angular.module('eShopper').controller('contactController', function($scope,contactService) {
+angular.module('foldKart').controller('contactController', function($scope,contactService) {
 
    $scope.contactMe = function() {
      contactService.contactMe($scope.contactData).then(function(data){

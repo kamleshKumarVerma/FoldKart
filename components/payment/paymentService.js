@@ -1,4 +1,4 @@
-angular.module('eShopper').service('paymentService', function($http,$q,constant,$rootScope) {
+angular.module('foldKart').service('paymentService', function($http,$q,constant,$rootScope) {
 
   this.saveCheckoutDetails = function(items) {
     var product_list = [];

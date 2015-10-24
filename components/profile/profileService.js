@@ -1,4 +1,4 @@
-angular.module('eShopper').service('profileService', function($http,$q,constant) {
+angular.module('foldKart').service('profileService', function($http,$q,constant) {
 	
 	this.updateMyProfile = function(userObject) {
 		var deferred = $q.defer();

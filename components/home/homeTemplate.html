@@ -12,14 +12,8 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="" ng-click="getProductsByCategory('8579c350-7347-11e5-8c01-d11cb4b03bc5')" data-toggle="dropdown">Electronics<b class="caret"></b></a> 
-                </li>
-                <li class="dropdown">
-                    <a href="" ng-click="getProductsByCategory('8edb5801-7347-11e5-8c01-d11cb4b03bc5')" data-toggle="dropdown">MEN<b class="caret"></b></a>
-                </li>
-                <li class="dropdown">
-                    <a href="" ng-click="getProductsByCategory('94e13e91-7347-11e5-8c01-d11cb4b03bc5')" data-toggle="dropdown">WOMEN<b class="caret"></b></a>
+                <li class="dropdown" ng-repeat="category in allCategory">
+                    <a href="" ng-click="getProductsByCategory(category.id)" data-toggle="dropdown">{{category.category|uppercase}}<b class="caret"></b></a> 
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -87,7 +81,10 @@
 
     <!-- Products -->
     <div class="row text-center">
-        <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="product in filteredProducts">
+        <div ng-if="isLoading">
+            <center><img src="images/loading.gif" class="img-responsive"></center>
+        </div>
+        <div ng-if="!isLoading"class="col-md-3 col-sm-6 hero-feature" ng-repeat="product in filteredProducts">
             <div class="thumbnail product-box">
                 <a ng-href="#/product/{{product.id}}">
                     <img src="{{product.img_url}}" alt="No image found" class="product-thum-image-url">
@@ -116,7 +113,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright &copy; E-Shopper 2015</p>
+                <p>Copyright &copy; F-Kart 2015</p>
             </div>
         </div>
     </footer>

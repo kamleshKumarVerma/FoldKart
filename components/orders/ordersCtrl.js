@@ -1,4 +1,4 @@
-angular.module('eShopper').controller('ordersController', function($scope,$rootScope,$location,$filter,ordersService) {
+angular.module('foldKart').controller('ordersController', function($scope,$rootScope,$location,$filter,ordersService) {
 	
 	$scope.getMyOrders = function() {
        ordersService.getMyOrders($rootScope.userObject.id).then(function(data){

@@ -1,4 +1,4 @@
-angular.module('eShopper').service('contactService', function($http,$q,constant) {
+angular.module('foldKart').service('contactService', function($http,$q,constant) {
 
  
   this.contactMe = function(dataObject) {

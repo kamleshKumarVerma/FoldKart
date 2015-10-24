@@ -1,4 +1,4 @@
-angular.module('eShopper').directive('wishList', function ($location) {
+angular.module('foldKart').directive('wishList', function ($location) {
     return {
       restrict: 'EA',
       templateUrl : "components/wishlist/wishlistTemplate.html",
@@ -7,11 +7,13 @@ angular.module('eShopper').directive('wishList', function ($location) {
 
          /* Get wishlist for the logged in user */
          $rootScope.getMyWishlist = function() {
+            $scope.isLoading = true;
             $scope.myWishlist = [];
             wishlistService.getWishlistProducts($rootScope.userObject.wishlist_products).then(function(data){
                  data.forEach(function (arrayItem) {
                      $scope.myWishlist.push(arrayItem.data)
                  });
+                 $scope.isLoading = false;
             })
          }
 

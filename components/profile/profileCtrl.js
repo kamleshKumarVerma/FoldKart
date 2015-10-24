@@ -1,4 +1,4 @@
-angular.module('eShopper').controller('profileController', function($scope,$rootScope,profileService) {
+angular.module('foldKart').controller('profileController', function($scope,$rootScope,profileService) {
      
     $scope.isUpdate = false;
 

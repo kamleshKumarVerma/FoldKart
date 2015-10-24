@@ -1,4 +1,4 @@
-angular.module('eShopper').directive('cart', function ($location) {
+angular.module('foldKart').directive('cart', function ($location) {
     return {
       restrict: 'EA',
       templateUrl : "components/cart/cartTemplate.html",

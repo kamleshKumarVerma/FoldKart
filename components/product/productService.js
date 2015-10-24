@@ -1,4 +1,4 @@
-angular.module('eShopper').service('productService', function($http,$q,constant) {
+angular.module('foldKart').service('productService', function($http,$q,constant) {
 	
 	this.getProduct = function(product_id) {
 	    var deferred = $q.defer();

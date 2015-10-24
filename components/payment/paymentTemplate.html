@@ -76,7 +76,7 @@
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-4">
-								<input type="text" required="" ng-model="payment.cvc" placeholder="CVC" class="form-control input-xs">
+								<input type="password" required="" ng-model="payment.cvc" placeholder="CVC" class="form-control input-xs">
 							</div>
 						</div>
 					</div>
@@ -89,48 +89,59 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<button class="btn btn-primary btn-lg btn-block" id="paymentSubmitButton" type="submit">Pay</button>
+						<button class="btn btn-primary btn-lg btn-block" id="paymentSubmitButton" type="submit">
+							{{buttonStateForPayment}}
+						</button>
 					</div>
 				</form>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="thumbnail payment-row-padding">
-				<span class="number">3</span>
-				<h3 class="payment-heading"> Finalize Order </h3>
-				<hr>
-				<div class="row" ng-repeat="item in cart">
-					<div class="col-md-6">
-						<img src="{{item.img_url}}" class="img-responsive payment-time-img-box">
-					</div>
-					<div class="col-md-6">
-						<label> {{item.price | currency : "Rs. " : "0" }}</label>
+			<form ng-submit="completeOrder()" id="completeOrderForm" class="form">
+				<div class="thumbnail payment-row-padding">
+					<span class="number">3</span>
+					<h3 class="payment-heading"> Finalize Order </h3>
+					<hr>
+					<div class="row" ng-repeat="item in cart">
+						<div class="col-md-6">
+							<img src="{{item.img_url}}" class="img-responsive payment-time-img-box">
+						</div>
+						<div class="col-md-6">
+							<label> {{item.price | currency : "Rs. " : "0" }}</label>
+						</div>
+						<hr>
 					</div>
 					<hr>
-				</div>
-				<hr>
-				<div class="row">
-					<div class="col-md-6">
-						<label>Subtotal</label>
+					<div class="row">
+						<div class="col-md-6">
+							<label>Subtotal</label>
+						</div>
+						<div class="col-md-6 pull-right">
+							<label> {{totalAmount | currency : "Rs. " : "0"}}</label>
+						</div>
 					</div>
-					<div class="col-md-6 pull-right">
-						<label> {{totalAmount | currency : "Rs. " : "0"}}</label>
+					<hr>
+					<div class="row">
+						<div class="col-md-1">
+							<label class="sub">Shipping:</label>
+						</div>
+						<div class="col-md-11 pull-right">
+							<div class="shipping-address-template">
+								<div>{{shippingAddress.first_name}} &nbsp; {{shippingAddress.last_name}}</div>
+								<div>{{shippingAddress.address}}</div>
+								<div>{{shippingAddress.city}} &nbsp; , &nbsp; {{shippingAddress.zip_code}}</div>
+								<div>{{shippingAddress.phone_no}}</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-lg btn-block">
+							{{buttonStateForCompleteOrder}}
+						</button>
+						<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>
 					</div>
 				</div>
-				<hr>
-				<div class="row">
-					<div class="col-md-6">
-						<label class="sub">Shipping:</label>
-					</div>
-					<div class="col-md-6 pull-right">
-						<label class="sub"> {{paymentDetails.address}}</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<button class="btn btn-primary btn-lg btn-block" ng-click="completeOrder()">Complete Order</button>
-					<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>
-				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-angular.module('eShopper').directive('login', function() {
+angular.module('foldKart').directive('login', function() {
 	return {
        restrict : "E",
        templateUrl : "components/login/loginTemplate.html",

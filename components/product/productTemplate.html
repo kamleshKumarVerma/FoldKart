@@ -1,5 +1,8 @@
-<div class="container">  
-    <div class="row">
+<div class="container"> 
+    <div class="row" ng-if="isLoading">
+        <center><img src="images/loading.gif" class="img-responsive"></center>
+    </div>
+    <div class="row" ng-if="!isLoading">
     	<div class="col-md-4">
     		<div class="thumbnail">
     			<img src="{{product.img_url}}" class="img-responsive specific-product-image-url">

@@ -1,4 +1,4 @@
-angular.module('eShopper').service('signupService', function($http,$q,constant) {
+angular.module('foldKart').service('signupService', function($http,$q,constant) {
 
   var verifyUser = function(data,dataObject) {
     return _.find(data, function(user) { 

@@ -10,6 +10,10 @@ hr {
   background-color: #333; /* Modern Browsers */
 }
 
+.nav-bar-color {
+  background-color: maroon;
+}
+
 .hero-spacer {
   margin-top: 50px;
 }
@@ -27,13 +31,23 @@ footer {
 }
 
 .sub-header-style {
-  background-color: pink;
+  background-color: #000000;
+  border-radius: 26px;
 }
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 70%;
   margin: auto;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.brand-logo {
+  margin-top: -9px;
+  width: 127px;
 }
 
 /*---------------- CSS For products in Home page ---------------*/
@@ -195,13 +209,13 @@ footer {
   padding: 12px;
 }
 
-.sub {
+.shipping-address-template {
   color: #aaa;
   display: block;
   margin: 5px auto;
-  text-align: center;
-  width: 80%;
   padding: 10px;
+  text-align: right;
+  width: 100%;
 }
 
 /* CSS for Contact Page */
@@ -319,4 +333,10 @@ footer {
 .wishlist-heading {
   font-style: oblique;
   padding: 16px;
+}
+
+/* CSS for admin */
+
+.category-selection {
+  margin-top: 50px;
 }

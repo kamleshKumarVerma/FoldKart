@@ -1,4 +1,4 @@
-angular.module('eShopper').service('ordersService', function($http,$q,constant) {
+angular.module('foldKart').service('ordersService', function($http,$q,constant) {
 
 	var findMyOrders = function(data,user_id) {
 		var myOrders = [];
@@ -28,7 +28,8 @@ angular.module('eShopper').service('ordersService', function($http,$q,constant) 
 	    angular.forEach(product_list , function(product_id) {
 	        var promise = $http({
 	            url   : constant.BASE_URL+'user_ordered_productses/'+product_id,
-	            method: 'GET'
+	            method: 'GET',
+	            cache: true
 	        });
 	        user_ordered_products.push(promise);
 	    });

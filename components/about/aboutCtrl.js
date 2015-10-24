@@ -1,3 +1,3 @@
-angular.module('eShopper').controller('aboutController', function($scope) {
+angular.module('foldKart').controller('aboutController', function($scope) {
 	
 });

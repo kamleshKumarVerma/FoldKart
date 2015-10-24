@@ -1,4 +1,4 @@
-angular.module('eShopper').directive('header', function() {
+angular.module('foldKart').directive('header', function() {
   return {
     restrict : "E",
     templateUrl : "components/header/headerTemplate.html",
@@ -34,6 +34,7 @@ angular.module('eShopper').directive('header', function() {
           wishlist_products : ""
         }
         $localStorage.userObject = $rootScope.userObject;
+        $rootScope.cart = [];
         $location.path("#/");
       }
 

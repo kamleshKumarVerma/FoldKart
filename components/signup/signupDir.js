@@ -1,4 +1,4 @@
-angular.module('eShopper').directive('signup', function() {
+angular.module('foldKart').directive('signup', function() {
 	return {
        restrict : "E",
        templateUrl : "components/signup/signupTemplate.html",

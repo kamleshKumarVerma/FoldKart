@@ -1,4 +1,4 @@
-angular.module('eShopper', ['ngRoute','ngSanitize','ngStorage']).config(function($routeProvider) {
+angular.module('foldKart', ['ngRoute','ngSanitize','ngStorage']).config(function($routeProvider) {
 	$routeProvider
 
 		// route for the home page

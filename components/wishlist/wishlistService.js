@@ -1,4 +1,4 @@
-angular.module('eShopper').service('wishlistService', function($http,$q,constant) {
+angular.module('foldKart').service('wishlistService', function($http,$q,constant) {
 
   this.getWishlistProducts = function(wishlist_products) {
     var product_list = [];
