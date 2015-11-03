@@ -118,7 +118,6 @@ category
 
 - category – string
 
-Frontend Web Development
 
 shipping_address
 
@@ -168,7 +167,6 @@ user_ordered_products
 
 - quantity – number
 
-Frontend Web Development
 
 contact
 
