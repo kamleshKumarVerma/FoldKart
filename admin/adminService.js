@@ -1,5 +1,7 @@
 angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
+	var BASE_URL = "https://foldkartnewapi.restlet.net/v1/";
+
     this.addCategoryIntoProducts = function(allProducts,allCategory) {
        for(var i=0 ; i<allProducts.length ; i++) {
        	var tempId = allProducts[i].category;
@@ -22,7 +24,7 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
     this.getAllProducts = function() {
     	var deferred = $q.defer();
-		$http({ method: 'GET', url: 'https://my-selfie-tech-login.apispark.net/v5/productses' })
+		$http({ method: 'GET', url: BASE_URL + 'productses' })
 		.success(function (data, status, headers, config)
 		{
 			deferred.resolve(data);
@@ -42,7 +44,7 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
     
     this.getAllCategory = function() {
         var deferred = $q.defer();
-		$http({ method: 'GET', url: 'https://my-selfie-tech-login.apispark.net/v5/categories' })
+		$http({ method: 'GET', url: BASE_URL + 'categories' })
 		.success(function (data, status, headers, config)
 		{
 			deferred.resolve(data);
@@ -56,7 +58,7 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
 	this.adminLogin = function(admin) {
 		var deferred = $q.defer();
-		$http({ method: 'GET', url: 'https://my-selfie-tech-login.apispark.net/v5/admins' })
+		$http({ method: 'GET', url: BASE_URL + 'admins' })
 		.success(function (data, status, headers, config)
 		{
 			deferred.resolve(findUser(data,admin));
@@ -70,11 +72,11 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
 	this.addCategory = function(category,admin) {
 		var deferred = $q.defer();
-		$http({ method: 'GET', url: 'https://my-selfie-tech-login.apispark.net/v5/admins' })
+		$http({ method: 'GET', url: BASE_URL + 'admins' })
 		.success(function (data, status, headers, config)
 		{
 			if(findUser(data,admin) !== undefined) {
-				$http({ method: 'POST', url: 'https://my-selfie-tech-login.apispark.net/v5/categories' , data : category })
+				$http({ method: 'POST', url: BASE_URL + 'categories' , data : category })
 				.success(function (data, status, headers, config)
 				{
 					deferred.resolve(data);
@@ -88,11 +90,11 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
 	this.addProduct = function(product,admin) {
 		var deferred = $q.defer();
-		$http({ method: 'GET', url: 'https://my-selfie-tech-login.apispark.net/v5/admins' })
+		$http({ method: 'GET', url: BASE_URL + 'admins' })
 		.success(function (data, status, headers, config)
 		{
 			if(findUser(data,admin) !== undefined) {
-				$http({ method: 'POST', url: 'https://my-selfie-tech-login.apispark.net/v5/productses' , data : product })
+				$http({ method: 'POST', url: BASE_URL + 'productses' , data : product })
 				.success(function (data, status, headers, config)
 				{
 					deferred.resolve(data);
@@ -107,7 +109,7 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
 	this.deleteProduct = function(product_id) {
 		var deferred = $q.defer();
-		$http({ method: 'DELETE', url: 'https://my-selfie-tech-login.apispark.net/v5/productses/'+ product_id })
+		$http({ method: 'DELETE', url: BASE_URL + 'productses/'+ product_id })
 		.success(function (data, status, headers, config)
 		{
 			deferred.resolve(data);
@@ -121,7 +123,7 @@ angular.module('foldKartAdmin').service('adminService', function($http,$q) {
 
 	this.updateProduct = function(product) {
         var deferred = $q.defer();
-		$http({ method: 'PUT', url: 'https://my-selfie-tech-login.apispark.net/v5/productses/'+ product.id , data : product })
+		$http({ method: 'PUT', url: BASE_URL + 'productses/'+ product.id , data : product })
 		.success(function (data, status, headers, config)
 		{
 			deferred.resolve(data);
